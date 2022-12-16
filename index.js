@@ -1,13 +1,15 @@
 const { config } = require('./config/userConfig');
 const express = require('express');
+const passport= require('passport');
 require('./models/connectMongo');
 const userRouter = require('./routers/userRouter');
 var app = express();
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
-
+app.use(passport.initialize());
 app.use('/user', userRouter);
+
 
 
 
