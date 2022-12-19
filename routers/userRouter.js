@@ -19,13 +19,6 @@ routers.patch('/update',userController.updateUser);
 //user get all users
 routers.get('/getAllUsers',passport.authenticate('jwt',{"session":false}),userController.getUsers);
 
-
-
-
-
-
-
-
-
+   
 
 module.exports=routers;
